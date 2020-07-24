@@ -12,6 +12,6 @@ city:"Albany", zipCode: 12084, fullName: "Claire Johnson", phoneNumber: '(518) 5
  )
 
  buyer =  Buyer.create(propertyType: 'Single Family and Multi Family', propertyValue: 100000 , 
-timeFrame: "2 Weeks",  state: "NY",
-city:"Albany", zipCode: 12084, fullName: "Malcolm Leake", phoneNumber: '(347) 510-4891'
+timeFrame: "2 Weeks",  state: "NY", city: "Albany",
+ zipCode: 12084, fullName: "Malcolm Leake", phoneNumber: '(347) 510-4891'
  )

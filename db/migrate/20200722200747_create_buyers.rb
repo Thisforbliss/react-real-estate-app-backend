@@ -4,8 +4,6 @@ class CreateBuyers < ActiveRecord::Migration[6.0]
       t.string :propertyType
       t.float :propertyValue
       t.string :timeFrame
-      t.string :streetAddress
-      t.string :unit
       t.string :state
       t.string :city
       t.integer :zipCode

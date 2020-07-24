@@ -16,8 +16,6 @@ ActiveRecord::Schema.define(version: 2020_07_22_200747) do
     t.string "propertyType"
     t.float "propertyValue"
     t.string "timeFrame"
-    t.string "streetAddress"
-    t.string "unit"
     t.string "state"
     t.string "city"
     t.integer "zipCode"
