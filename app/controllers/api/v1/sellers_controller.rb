@@ -1,10 +1,11 @@
 class Api::V1::SellersController < ApplicationController
     
     def index
-        binding.pry
-        @seller = Seller.all
         
-        render json: @seller, status: 200
+        seller = Seller.all
+       
+        render json: seller
+   
     end
 
 
