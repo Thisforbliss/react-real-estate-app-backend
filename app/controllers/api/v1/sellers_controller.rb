@@ -20,11 +20,12 @@ class Api::V1::SellersController < ApplicationController
     end
 
     def create
+        binding.pry
         @seller = Seller.new(seller_params)
         if  @seller.save     
         render json: @seller, status: 200
         else
-        render 'new'
+        render json: {error: 'Error Saving Your Information'}
         end
     end
 
@@ -54,7 +55,7 @@ class Api::V1::SellersController < ApplicationController
     private
 
     def seller_params
-        params.require(:seller).permit(:propertyType, :propertyValue, :timeFrame,:state, :city, :zipCode, :fullName, :phoneNumber    )
+        params.require(:seller).permit(:propertyType, :propertyValue, :timeFrame,:state, :city, :zipCode, :fullName, :phoneNumber, :unit    )
     end
 
 end

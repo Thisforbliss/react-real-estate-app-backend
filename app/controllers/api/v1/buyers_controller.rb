@@ -22,7 +22,7 @@ class Api::V1::BuyersController < ApplicationController
         if  @buyer.save    
         render json: @buyer, status: 200
         else
-        render 'new'
+        render json: {error: 'Error Saving Your Information'}
         end
     end
 
