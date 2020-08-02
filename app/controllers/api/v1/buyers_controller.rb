@@ -18,12 +18,14 @@ class Api::V1::BuyersController < ApplicationController
     end
 
     def create
-        @buyer = Buyer.new(buyer_params)
-        if  @buyer.save    
-        render json: @buyer, status: 200
-        else
-        render json: {error: 'Error Saving Your Information'}
-        end
+      
+        
+        
+        # if  @buyer.save    
+        #  render json: @buyer, status: 200
+        # else
+        #  render json: {error: 'Error Saving Your Information'}
+        # end
     end
 
     def show

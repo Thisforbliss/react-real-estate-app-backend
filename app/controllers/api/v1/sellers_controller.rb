@@ -21,6 +21,7 @@ class Api::V1::SellersController < ApplicationController
 
     def create
         binding.pry
+        
         @seller = Seller.new(seller_params)
         if  @seller.save     
         render json: @seller, status: 200
@@ -55,7 +56,7 @@ class Api::V1::SellersController < ApplicationController
     private
 
     def seller_params
-        params.require(:seller).permit(:propertyType, :propertyValue, :timeFrame,:state, :city, :zipCode, :fullName, :phoneNumber, :unit    )
+        params.require(:seller).permit(:streetAddress, :propertyType, :propertyValue, :timeFrame,:state, :city, :zipCode, :fullName, :phoneNumber, :unit    )
     end
 
 end
