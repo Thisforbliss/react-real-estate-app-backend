@@ -20,7 +20,7 @@ class Api::V1::SellersController < ApplicationController
     end
 
     def create
-        binding.pry
+        
         
         @seller = Seller.new(seller_params)
         if  @seller.save     
